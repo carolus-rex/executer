@@ -54,6 +54,9 @@ def main(url):
 		except ValueError:
 			print('THERE ARE NO TASKS TO BE EXECUTED')
 			continue
+		except Exception as e:
+			print("SOMETHING WRONG HAPPENED DURING FETCH")
+			print(e)
 
 		try:
 			print("EXECUTING TASK %i" % task["id"])
